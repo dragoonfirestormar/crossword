@@ -23,4 +23,4 @@ ___
  'X......X.', 
  'XX.X.XXX.', 
  'XXXX.....']
- * [CrossWord Answer](https://i.stack.imgur.com/ofiXW.png)
+ * ![alt text](https://i.stack.imgur.com/ofiXW.png "Logo Title Text 1")
