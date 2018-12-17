@@ -12,7 +12,7 @@ ___
 #### How Does It Works?
 
 * User inputs the default corssword.
-** User inputs the word(s) to find.
+ * User inputs the word(s) to find.
 * Output as 
  ['...XXXXXX', 
  '.XXX.X...', 
@@ -23,4 +23,4 @@ ___
  'X......X.', 
  'XX.X.XXX.', 
  'XXXX.....']
-** [CrossWord Answer](https://i.stack.imgur.com/ofiXW.png)
+ * [CrossWord Answer](https://i.stack.imgur.com/ofiXW.png)
