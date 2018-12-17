@@ -1,4 +1,4 @@
-# crossword
+# CROSSWORD
 ___
 
 We **tries** to _solve the crosswords_ 
