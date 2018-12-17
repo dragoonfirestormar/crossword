@@ -23,4 +23,4 @@ ___
  'X......X.', 
  'XX.X.XXX.', 
  'XXXX.....']
->> ![Tux, the Linux mascot](https://i.stack.imgur.com/pqjRE.png)
+>> [](https://i.stack.imgur.com/ofiXW.png)
