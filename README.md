@@ -11,9 +11,9 @@ ___
 
 #### How Does It Works?
 
-*User inputs the default corssword.
-**User inputs the word(s) to find.
-*Output as 
+* User inputs the default corssword.
+** User inputs the word(s) to find.
+* Output as 
  ['...XXXXXX', 
  '.XXX.X...', 
  '.....X.XX', 
