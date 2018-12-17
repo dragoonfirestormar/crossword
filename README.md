@@ -11,9 +11,9 @@ ___
 
 #### How Does It Works?
 
-> User inputs the default corssword.
->> User inputs the word(s) to find.
-> Output as 
+*User inputs the default corssword.
+**User inputs the word(s) to find.
+*Output as 
  ['...XXXXXX', 
  '.XXX.X...', 
  '.....X.XX', 
@@ -23,4 +23,4 @@ ___
  'X......X.', 
  'XX.X.XXX.', 
  'XXXX.....']
->> [](https://i.stack.imgur.com/ofiXW.png)
+** [CrossWord Answer](https://i.stack.imgur.com/ofiXW.png)
