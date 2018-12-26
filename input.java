@@ -22,19 +22,24 @@ public class input
     public static int row;
     public static int column;
     public static int noOFWORDS;
-    public ArrayList<String> words = new ArrayList<String>();
+    public static String[] words;
+    public static String[][] crossword;
+    
     public input()
     {
 
     }
+    
     public void main()
     {
-        input ex = new input();
-        ex.dimention();
-        word(); //getting words
-        String[][] FilledArray = ex.filling(); //getting filled array
-        //System.out.println(Arrays.deepToString(FilledArray)); to test the filled array
-        //System.out.println(words); to test the given words
+            input ex = new input();
+            ex.dimention();
+            ex.creator();
+            ex.filling();
+            ex.word(); //getting words
+             //getting filled array
+            //System.out.println(Arrays.deepToString(crossword)); //to test the filled array
+            //System.out.println(Arrays.toString(words)); //to test the given words
     }
 
     
@@ -48,24 +53,26 @@ public class input
         catch (Exception e) { System.out.println("Warning: Enter The Number (Integer), Not A String"); }
     }
     
-    public String[][] creator()
-    {
-        String[][] crossword = new String [column][row];
-        return crossword;
+    public void creator()
+    {   
+
+        crossword = new String [column][row];
+
     }
     
-    public String[][] filling() 
+    public void filling() 
     {
-        String[][] filled = creator();
+
         for(int a=0 ; a<column ; a++) 
         {
             for(int b=0 ; b<row ; b++)
             {
                 System.out.print("\nEnter The Element Of Column : "+(a+1)+" and Row : "+(b+1)+" : ");
-                filled[a][b] = String.valueOf((y.next()).charAt(0));
+                crossword[a][b] = String.valueOf((y.next()).charAt(0));
+                
             }
         }
-        return filled;  
+
     }
     
     public void word() 
@@ -74,11 +81,11 @@ public class input
         try{
         noOFWORDS = y.nextInt(); }
         catch (Exception e) { System.out.println("Warning: Enter The Number (Integer), Not A String"); }
+        words = new String[noOFWORDS];
         for(int c = 0 ; c<noOFWORDS ; c++)
         {
-            System.out.println("Enter The Word To Find");
-            
-            words.add(y.next());
+            System.out.print("\nEnter The Word To Find : ");
+            words[c] = y.next();
         }
     }
     
