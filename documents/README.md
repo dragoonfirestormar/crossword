@@ -25,7 +25,7 @@ The Logic Class Provides You Some Of The Helpful Functions:
 
 **Return Type** : `String []`
 
-**Return** : *An Array With All The Index(es) Contating The First Character In The Double Dimention Array*
+**Return** : *An Array With All The Index(es) Contating The First Character In The Double Dimention Array.*
 
 ### Example
 ```java
@@ -53,7 +53,7 @@ class Index {
 
 **Return Type** : `String []`
 
-**Return** : *An Array With All The Index(es) Contating The Given Character In The Double Dimention Array Around The Provided Index*
+**Return** : *An Array With All The Index(es) Contating The Given Character In The Double Dimention Array Around The Provided Index.*
 
 ### Example
 ```java
@@ -71,7 +71,35 @@ class Check {
 }
 ```
 
-> Output :  [0/1, 1/0]
+> Output :  `[0/1, 1/0]`
+
+
+
+## Trust Factor Function [^](#check-function-)
+
+**Arguments** : `String [] [] DDA`, `String Index` and `String Word`
+
+**Return Type** : `boolean`
+
+**Return** : *True or False Whether The Given Character In The Double Dimention Array Around The Provided Index Exists Or Not.*
+
+### Example
+```java
+import java.util.*;
+class TrustFactor {
+  void main () {
+    String [] [] DDA = {  {"A","B","C","D"},
+                          {"B","F","G","A"},
+                          {"I","A","K","L"},
+                          {"M","N","A","P"}  };
+    logic ex = new logic () ;
+    boolean ind = ex.trustfactor( DDA, "0/0", "B" );
+    System.out.println( ind );
+    }
+}
+```
+
+> Output :  `true`
 
 
 <div align="center">
