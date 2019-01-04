@@ -19,4 +19,4 @@ The Logic Class Provides You Some Of The Helpful Functions:
 
 
 #### Index Function
-**Arguments** : 'assad' `dsadsasd `
+**Arguments** : `String [] [] DDA` and `String Word`
