@@ -1,6 +1,6 @@
 But I have to admit, logic:
 
-- [x] provide helpful functions.
+- [x] provide useful functionality.
 - [ ] doesn't do work for you.
 
 
@@ -9,7 +9,7 @@ ___
 
 # Introduction
 
-The Logic Class Provides You Some Of The Helpful Functions:
+The Logic Class Provides You Some Helpful Functions:
 
 - Output Of Index(es) Of The First Charechter Of The Word.
 - Checking Out Of The The Character Next To Any Index.
