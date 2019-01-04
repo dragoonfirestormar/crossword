@@ -18,5 +18,6 @@ The Logic Class Provides You Some Of The Helpful Functions:
 - Output The DDA With Found Word In Upper Case.  
 
 
-#### Index Function
+
+### Index Function
 **Arguments** : `String [] [] DDA` and `String Word`
