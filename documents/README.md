@@ -20,8 +20,11 @@ The Logic Class Provides You Some Of The Helpful Functions:
 
 
 ## Index Function [^](#introduction)
+
 **Arguments** : `String [] [] DDA` and `String Word`
+
 **Return Type** : `String []`
+
 **Return** : *An Array With All The Index(es) Contating The First Character In The Double Dimention Array*
 
 ##### Example
