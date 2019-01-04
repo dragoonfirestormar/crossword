@@ -140,5 +140,7 @@ class TrustFactor {
 <br><br>
 
 <div align="center">
-  :broken_heart: :copyright: :snowflake:
+  :broken_heart: :copyright: :snowflake: 
+  <br>
+  <a href="http://dragoon.ooo">Dragoon</a>
 </div>
