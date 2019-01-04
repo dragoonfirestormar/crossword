@@ -24,7 +24,21 @@ The Logic Class Provides You Some Of The Helpful Functions:
 **Return Type** : `String []`
 **Return** : *An Array With All The Index(es) Contating The First Character In The Double Dimention Array*
 
-
+##### Example
+```java
+import java.util.*;
+class index {
+  void main () {
+    String [] [] DDA = {  {"A","B","C","D"},
+                          {"B","F","G","H"},
+                          {"I","J","K","L"},
+                          {"M","N","O","P"}  };
+    logic ex = new logic () ;
+    String [] ind = ex.index( DDA, "A" );
+    System.out.println( Arrays.toString( ind ) );
+    }
+}
+```
 
 <div align="center">
   [^](#introduction)
