@@ -49,7 +49,7 @@ class Index {
 
 ## Check Function [^](#index-function-)
 
-**Arguments** : `String [] [] DDA`, `String Index` and `String Word`
+**Arguments** : `String [] [] DDA`, `String Index` and `String Character`
 
 **Return Type** : `String []`
 
@@ -75,9 +75,10 @@ class Check {
 
 
 
+
 ## Trust Factor Function [^](#check-function-)
 
-**Arguments** : `String [] [] DDA`, `String Index` and `String Word`
+**Arguments** : `String [] [] DDA`, `String Index` and `String Character`
 
 **Return Type** : `boolean`
 
@@ -101,6 +102,38 @@ class TrustFactor {
 
 > Output :  `true`
 
+
+
+
+## Trust Factor Function [^](#check-function-)
+
+**Arguments** : `String [] [] DDA` and `String Index` 
+
+**Return Type** : `String [] []`
+
+**Return** : *True or False Whether The Given Character In The Double Dimention Array Around The Provided Index Exists Or Not.*
+
+### Example
+```java
+import java.util.*;
+class TrustFactor {
+  void main () {
+    String [] [] DDA = {  {"A","B","C","D"},
+                          {"B","F","G","A"},
+                          {"I","A","K","L"},
+                          {"M","N","A","P"}  };
+    String [] indexes = { "0/0", "1/1", "2/2", "3/3" } ;                          
+    logic ex = new logic () ;
+    String [] [] ind = ex.output( DDA, indexes );
+    System.out.println( Arrays.deepToString( ind ) );
+    }
+}
+```
+
+> Output :  `[[A, b, c, d], 
+              [b, F, g, h], 
+              [i, j, K, l], 
+              [m, n, o, P]]`
 
 <div align="center">
   :broken_heart: :copyright: :snowflake:
