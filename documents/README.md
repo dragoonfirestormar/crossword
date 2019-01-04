@@ -19,5 +19,5 @@ The Logic Class Provides You Some Of The Helpful Functions:
 
 
 
-### Index Function
+## Index Function
 **Arguments** : `String [] [] DDA` and `String Word`
