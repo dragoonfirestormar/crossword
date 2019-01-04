@@ -27,5 +27,5 @@ The Logic Class Provides You Some Of The Helpful Functions:
 
 
 <div align="center">
-  my text here.
+  [^](#introduction)
 </div>
