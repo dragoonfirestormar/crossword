@@ -42,5 +42,5 @@ class index {
 > Output :  `[0/0, 1/3, 2/1, 3/2]`
 
 <div align="center">
-  :broken_heart:
+  :broken_heart: :broken_heart: :broken_heart:
 </div>
