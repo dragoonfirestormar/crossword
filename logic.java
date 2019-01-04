@@ -1,63 +1,150 @@
 package crossword;
-/*
-    *no. of row (int)   row
-    *no. of column (int)    column
-    *no. of words to find (int) noOFWORDS
-    *words to find (ArrayList) words
-    *crossword (Arrays) crossword
- */
-import java.util.Arrays;
+
+import java.util.*;
 
 public class logic
 {
-    int column=4; int row =2;
-    String[] index = new String[0];
-    String[][] arr = { {"A","B"}, {"A","B"}, {"A","B"}, {"A","B"} };
-    String words = "AAA";
-    public logic()
-    {  
-           
-
+    
+    public logic ()
+    {
+        //
     }
     
-    public void collector(String XYZ) 
+    
+    public String [] index ( String [] [] DDA, String Word ) 
     {
-        String word = XYZ;
-        String[] wo = word.split("");
-        for(int c = 0 ; c < column ; c++) 
+        //
+        String[] index = new String[0];
+        //
+        String [] [] alpha = DDA ;
+        String beta = Word ;
+        String [] gama = beta.split( "/" ) ;
+        int row = alpha.length ;
+        int column = alpha[0].length ;
+        //
+        for( int r = 0 ; r < row ; r++ ) 
         {
-            for(int r = 0 ; r < row ; r++)
+            //
+            for( int c = 0 ; c < column ; c++ )
             {
-                if( arr[c][r].equals(wo[0]))
+                // 
+                if( ( alpha [r] [c] ).equals( gama[0] ) )
                 {
-                    index = Arrays.copyOf(index, (index.length+1));
-                    index [index.length-1] = c+"/"+r;
+                    //
+                    index = Arrays.copyOf( index, ( index.length + 1 ) ) ;
+                    index [ index.length - 1 ] = ( r + "/" + c ) ;
                 }
             }
         }
-        System.out.println(Arrays.toString(index));
+        //
+        return index;
     }
     
-    public void check(String XYZ,String In) 
+    
+    public String [] check ( String [] [] DDA, String Index, String Character )
     {
-        String[] in = In.split("/");
-        System.out.println(Arrays.toString(in));
-        String word = XYZ;
-        String[] wo = word.split("");
-        for(int c =(Integer.parseInt(in[0])-1) ; c <= (Integer.parseInt(in[0])+1) ; c++) 
+        //
+        String[] index = new String[0];
+        //
+        String [] [] alpha = DDA ; //DDA
+        String beta = String.valueOf( Character.charAt( 0 ) ) ; //Char
+        String [] gama = Index.split( "/" ) ; //Index
+        int row = alpha.length ;
+        int column = alpha[0].length ;
+        //
+        for( int ro = ( Integer.parseInt( gama [0] ) - 1 ) ; ro <= ( Integer.parseInt( gama [0] ) + 1 ) ; ro++ )
         {
-            for(int r =(Integer.parseInt(in[1])-1) ; r <= (Integer.parseInt(in[1])+1) ; r++) 
-            {   
-                
-                if(c>+0 && r>=0) {
-                
-                if( arr[c][r].equals(wo[0]))
-                    System.out.println(c+" "+r); } 
+            //
+            for( int col = ( Integer.parseInt( gama [1] ) - 1 ) ; col <= ( Integer.parseInt( gama [1] ) + 1 ) ; col++ )
+            {
+                //
+                if( ro >= 0 && col >= 0 )
+                {
+                    //
+                    if( ro < row && col < column )
+                    {
+                        //
+                        if( ( alpha [ro] [col] ).equals( beta ) )
+                        {
+                            //
+                            index = Arrays.copyOf( index, ( index.length + 1 ) ) ;
+                            index [ index.length - 1 ] = ( ro + "/" + col ) ;
+                        }
+                    }
+                }
             }
         }
+        return index;
     }
     
     
+    public boolean trustfactor ( String [] [] DDA, String Index, String Character )
+    {
+        //
+        String [] [] alpha = DDA ; //DDA
+        String beta = String.valueOf( Character.charAt( 0 ) ) ; //Char
+        String [] gama = Index.split( "/" ) ; //Index
+        int row = alpha.length ;
+        int column = alpha[0].length ;
+        int constant = 0;
+        //
+        for( int ro = ( Integer.parseInt( gama [0] ) - 1 ) ; ro <= ( Integer.parseInt( gama [0] ) + 1 ) ; ro++ )
+        {
+            //
+            for( int col = ( Integer.parseInt( gama [1] ) - 1 ) ; col <= ( Integer.parseInt( gama [1] ) + 1 ) ; col++ )
+            {
+                //
+                if( ro >= 0 && col >= 0 )
+                {
+                    //
+                    if( ro < row && col < column )
+                    {
+                        //
+                        if( ( alpha [ro] [col] ).equals( beta ) )
+                        {
+                            //
+                            constant++;
+                        }
+                    }
+                }
+            }
+        }
+        if(constant==0)
+            return false;
+        else
+            return true;
+    }
     
-
-}
+    public String [] [] output ( String [] [] DDA, String [] Index )
+    {
+        //
+        //String [] [] CapThat = new String [length-1] [2] ;
+        String [] [] alpha = DDA ;
+        String [] beta;
+        String [] gama = Index;
+        //
+        int length = gama.length;
+        int row = alpha.length ;
+        int column = alpha[0].length ;
+        //
+        for( int r = 0 ; r < row ; r++ )
+        {
+            //
+            for( int c = 0 ; c < column ; c++ )
+            {
+                //
+                alpha [r] [c] = ( alpha [r] [c] ).toLowerCase();
+            }
+        }
+        
+        for( int cont = 0 ; cont < length ; cont ++)
+        {
+            //
+            beta = ( gama [cont] ).split( "/" ) ;
+            alpha [ Integer.parseInt( beta[0] ) ][ Integer.parseInt( beta[1] ) ] = ( alpha [ Integer.parseInt( beta[0] ) ] [ Integer.parseInt( beta[1] ) ] ).toUpperCase();
+        }
+        
+        return alpha;
+    }
+    
+}   
