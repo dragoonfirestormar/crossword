@@ -137,6 +137,8 @@ class TrustFactor {
               [i, j, K, l], 
               [m, n, o, P]]`
 
+<br><br>
+
 <div align="center">
   :broken_heart: :copyright: :snowflake:
 </div>
