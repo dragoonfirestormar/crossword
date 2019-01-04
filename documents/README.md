@@ -41,6 +41,31 @@ class index {
 ```
 > Output :  `[0/0, 1/3, 2/1, 3/2]`
 
+
+
+## Index Function [^](#index-function-)
+**Arguments** : `String [] [] DDA` and `String Word`
+ **Return Type** : `String []`
+ **Return** : *An Array With All The Index(es) Contating The First Character In The Double Dimention Array*
+
+##### Example
+```java
+import java.util.*;
+class index {
+  void main () {
+    String [] [] DDA = {  {"A","B","C","D"},
+                          {"B","F","G","A"},
+                          {"I","A","K","L"},
+                          {"M","N","A","P"}  };
+    logic ex = new logic () ;
+    String [] ind = ex.index( DDA, "ABC" );
+    System.out.println( Arrays.toString( ind ) );
+    }
+}
+```
+> Output :  `[0/0, 1/3, 2/1, 3/2]`
+
+
 <div align="center">
-  :broken_heart: :broken_heart: :broken_heart:
+  :broken_heart: :copyright: :snowflake:
 </div>
