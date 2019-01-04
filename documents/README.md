@@ -30,15 +30,16 @@ import java.util.*;
 class index {
   void main () {
     String [] [] DDA = {  {"A","B","C","D"},
-                          {"B","F","G","H"},
-                          {"I","J","K","L"},
-                          {"M","N","O","P"}  };
+                          {"B","F","G","A"},
+                          {"I","A","K","L"},
+                          {"M","N","A","P"}  };
     logic ex = new logic () ;
-    String [] ind = ex.index( DDA, "A" );
+    String [] ind = ex.index( DDA, "ABC" );
     System.out.println( Arrays.toString( ind ) );
     }
 }
 ```
+> Output :  `[0/0, 1/3, 2/1, 3/2]`
 
 <div align="center">
   [^](#introduction)
