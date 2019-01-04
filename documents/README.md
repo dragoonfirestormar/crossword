@@ -1,7 +1,7 @@
 But I have to admit, logic:
 
 - [x] provide useful functionality.
-- [ ] doesn't do work for you.
+- [ ] do work for you.
 
 
 ___
