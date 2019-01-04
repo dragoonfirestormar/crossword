@@ -17,7 +17,7 @@ The Logic Class Provides You Some Of The Helpful Functions:
   - Which Returns Index(ex) Of Following Character(s).
 - Output The DDA With Found Word In Upper Case.  
 
-
+<br><br>
 
 ## Index Function [^](#introduction)
 
@@ -44,7 +44,7 @@ class Index {
 ```
 > Output :  `[0/0, 1/3, 2/1, 3/2]`
 
-
+<br><br>
 
 
 ## Check Function [^](#index-function-)
@@ -74,6 +74,7 @@ class Check {
 > Output :  `[0/1, 1/0]`
 
 
+<br><br>
 
 
 ## Trust Factor Function [^](#check-function-)
@@ -103,9 +104,10 @@ class TrustFactor {
 > Output :  `true`
 
 
+<br><br>
 
 
-## Trust Factor Function [^](#check-function-)
+## Output Function [^](#trust-factor-function-)
 
 **Arguments** : `String [] [] DDA` and `String Index` 
 
