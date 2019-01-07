@@ -3,15 +3,50 @@ package crossword;
 import java.util.*;
 
 public class logic
-{
+{int nr=0,nc=0;
     
-    public logic ()
-    {
-        //
+    public find ()
+    {    int x[] = { -1,-1,-1, 0, 0, 1, 1, 1 } ; 
+         int y[] = { -1, 0, 1,-1, 1,-1, 0, 1 } ; 
+        
+        for(int m = 0 ; m < now ; m++) // now  = number of words
+       {
+        for(int i = 0 ; i < r ; i++)   // r = number of rows or column length
+         {
+          for (int j = 0 ; j < c ; j++)// c = number of columns or row length
+           {if( charr[i][j] == words[m].charAt(0)) // charr is the grid of alphabets and words is the array of all words entered by user
+             {int l = words[m].length();
+              for (int h=1 ; h<=8 ; h++)
+               {string fw = "";nr=i;nc=j;
+                for(int k=0 ; k<l ; k++)
+                 { if(nr < 0 || nc < 0 || nr >= r || nc >= c)
+                   {break;}
+                   if(charr[nr][nc] != words[m].charAt(k))
+                   {break;}
+                   fw = fw + charr [nr][nc];
+                   nr += x[h-1]; nc +=y[h-1]; // x and y are arrays of numbers for calculating next position of character according to a specific direction
+                 }
+                if(fw.equals(words[m]))
+                 {fx[m] = i ; fy[m] = j ; d[m] = h ; break;}
+               }
+              if(fw.equals(words[m]))
+               break;
+             }
+           }
+           if(fw.equals(words[m]))
+           break;
+         }
+         if(fw.equals(words[m]))
+           continue;
+            
+            /* this function will give 3 arrays fx , fy , d , all three are of length = now where fx contains the
+               row numbers of the first alphabets of all words entered , fy contains the column numbers same as 
+               fx and d contains the direction as per the 2 arrays x and y */
+       }
     }
     
     
-    public String [] index ( String [] [] DDA, String Word ) 
+ /*   public String [] index ( String [] [] DDA, String Word ) 
     {
         //
         String[] index = new String[0];
@@ -146,5 +181,5 @@ public class logic
         
         return alpha;
     }
-    
+   */ 
 }   
