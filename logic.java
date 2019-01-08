@@ -4,27 +4,29 @@ import java.util.*;
 
 public class logic
 {int nr=0,nc=0;
-    
+ public static int fx[noOFWords];   
+ public static int fy[noOFWords];
+ public static int d[noOFWords];
     public find ()
     {    int x[] = { -1,-1,-1, 0, 0, 1, 1, 1 } ; 
          int y[] = { -1, 0, 1,-1, 1,-1, 0, 1 } ; 
         
-        for(int m = 0 ; m < now ; m++) // now  = number of words
+        for(int m = 0 ; m < noOFWORDS ; m++) 
        {
-        for(int i = 0 ; i < r ; i++)   // r = number of rows or column length
+        for(int i = 0 ; i < row ; i++)
          {
-          for (int j = 0 ; j < c ; j++)// c = number of columns or row length
-           {if( charr[i][j] == words[m].charAt(0)) // charr is the grid of alphabets and words is the array of all words entered by user
+          for (int j = 0 ; j < column ; j++)
+           {if( charr[i][j] == words[m].charAt(0))
              {int l = words[m].length();
               for (int h=1 ; h<=8 ; h++)
                {string fw = "";nr=i;nc=j;
                 for(int k=0 ; k<l ; k++)
-                 { if(nr < 0 || nc < 0 || nr >= r || nc >= c)
+                 { if(nr < 0 || nc < 0 || nr >= row || nc >= column)
                    {break;}
-                   if(charr[nr][nc] != words[m].charAt(k))
+                   if(crossword[nr][nc] != words[m].charAt(k))
                    {break;}
-                   fw = fw + charr [nr][nc];
-                   nr += x[h-1]; nc +=y[h-1]; // x and y are arrays of numbers for calculating next position of character according to a specific direction
+                   fw = fw + crossword [nr][nc];
+                   nr += x[h-1]; nc +=y[h-1];
                  }
                 if(fw.equals(words[m]))
                  {fx[m] = i ; fy[m] = j ; d[m] = h ; break;}
