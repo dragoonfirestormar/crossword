@@ -1,7 +1,7 @@
 # CROSSWORD
 ___
 
-We **tries** to _solve the crosswords_ 
+We **did** _solve the crosswords_ 
 
 ___
 
