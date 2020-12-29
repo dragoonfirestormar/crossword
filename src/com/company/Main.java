@@ -21,7 +21,6 @@ public class Main {
         //x.output();
         x.finder();
         System.out.println("\n-X-X-X-X");
-
     }
 
     void input(){
